@@ -1,0 +1,10 @@
+{
+  "name": "WebEFCoreApp",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "devextreme-dist": "23.1.2-beta",
+    "@devexpress/analytics-core": "23.1-stable",
+    "devexpress-dashboard": "23.1.2-beta"
+  }
+}

@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dashboard>
+	<Title Text="Sample Dashboard" />
+	<DataSources>
+		<EFDataSource Name="EF Data Source" ConnectionName="EF Data Connection" Source="WebEFCoreApp.OrdersContext, WebEFCoreApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" ComponentName="eFDataSource1" />
+	</DataSources>
+	<Items>
+		<Grid ComponentName="gridDashboardItem1" Name="Count of orders by Cities" DataSource="eFDataSource1" DataMember="Orders">
+			<DataItems>
+				<Dimension DataMember="ShipCity" DefaultId="DataItem1" />
+				<Measure DataMember="OrderID" SummaryType="Count" DefaultId="DataItem0" />
+			</DataItems>
+			<GridColumns>
+				<GridDimensionColumn>
+					<Dimension DefaultId="DataItem1" />
+				</GridDimensionColumn>
+				<GridMeasureColumn Name="Orders Count" DisplayMode="Bar">
+					<Measure DefaultId="DataItem0" />
+					<Totals>
+						<Total Type="Sum" />
+					</Totals>
+				</GridMeasureColumn>
+			</GridColumns>
+			<GridOptions />
+			<ColumnFilterOptions />
+		</Grid>
+		<ListBox ComponentName="listBoxDashboardItem1" Name="Ship Countries" DataSource="eFDataSource1" DataMember="Orders">
+			<DataItems>
+				<Dimension DataMember="ShipCountry" DefaultId="DataItem0" />
+			</DataItems>
+			<FilterDimensions>
+				<Dimension DefaultId="DataItem0" />
+			</FilterDimensions>
+		</ListBox>
+	</Items>
+	<LayoutTree>
+		<LayoutGroup>
+			<LayoutItem DashboardItem="listBoxDashboardItem1" Weight="0.35437212360289283" />
+			<LayoutItem DashboardItem="gridDashboardItem1" Weight="1.645627876397107" />
+		</LayoutGroup>
+	</LayoutTree>
+</Dashboard>
