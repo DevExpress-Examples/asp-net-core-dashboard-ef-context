@@ -19,5 +19,4 @@ namespace WebEFCoreApp {
             scope.Dispose();
         }
     }
-
 }
