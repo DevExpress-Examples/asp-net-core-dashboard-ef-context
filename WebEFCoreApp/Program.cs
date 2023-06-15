@@ -37,7 +37,7 @@ builder.Services.AddScoped<DashboardConfigurator>((IServiceProvider serviceProvi
 
     return configurator;
 });
-builder.Services.AddDbContext<OrdersContext>(options => options.UseSqlite("Data Source=file:Data/nwind.db"), ServiceLifetime.Transient);
+builder.Services.AddDbContext<OrdersContext>(options => options.UseSqlite("Data Source=file:Data/nwind.db"));
 var app = builder.Build();
 
 
