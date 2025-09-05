@@ -10,11 +10,11 @@ The following example obtains Entity Framework Core context from an ASP.NET Core
 
 1. Implement the `IEFContextProvider` interface (`CustomEFContextProvider` class in this example) to create a service that allows you to get the EF Core Context.
 
-2. Call the [IEFContextProvider.GetContext(String, Type)](https://docs.devexpress.com/CoreLibraries/DevExpress.Data.Entity.IEFContextProvider.GetContext(System.String-System.Type)?v=23.1&p=netframework) method to return a context for the specified data source.
+2. Call the [IEFContextProvider.GetContext(String, Type)](https://docs.devexpress.com/CoreLibraries/DevExpress.Data.Entity.IEFContextProvider.GetContext(System.String-System.Type)) method to return a context for the specified data source.
 
 3. Call the [AddDbContext](https://learn.microsoft.com/en-us/dotnet/api/microsoft.extensions.dependencyinjection.entityframeworkservicecollectionextensions.adddbcontext?view=efcore-7.0) method to register the context in the dependency injection container and specify the required connection string in the `WebApplicationBuilder` class.
 
-4. In the `WebApplicationBuilder` class, register the [DashboardConfigurator](https://docs.devexpress.com/Dashboard/DevExpress.DashboardWeb.DashboardConfigurator?v=23.1&p=netframework) service and configure it using the [SetEFContextProvider(IEFContextProvider)](https://docs.devexpress.com/Dashboard/DevExpress.DashboardWeb.DashboardConfigurator.SetEFContextProvider(DevExpress.Data.Entity.IEFContextProvider)?v=23.1&p=netframework) method.
+4. In the `WebApplicationBuilder` class, register the [DashboardConfigurator](https://docs.devexpress.com/Dashboard/DevExpress.DashboardWeb.DashboardConfigurator) service and configure it using the [SetEFContextProvider(IEFContextProvider)](https://docs.devexpress.com/Dashboard/DevExpress.DashboardWeb.DashboardConfigurator.SetEFContextProvider(DevExpress.Data.Entity.IEFContextProvider)?v=23.1&p=netframework) method.
 
 ## Files to Review
 
@@ -22,7 +22,7 @@ The following example obtains Entity Framework Core context from an ASP.NET Core
 - [CustomEFContextProvider.cs](./WebEFCoreApp/CustomEFContextProvider.cs)
 ## Documentation
 
-- [IEFContextProvider](https://docs.devexpress.com/CoreLibraries/DevExpress.Data.Entity.IEFContextProvider?v=23.1&p=netframework)
+- [IEFContextProvider](https://docs.devexpress.com/CoreLibraries/DevExpress.Data.Entity.IEFContextProvider)
 - [DashboardConfigurator.SetEFContextProvider](https://docs.devexpress.com/Dashboard/DevExpress.DashboardWeb.DashboardConfigurator.SetEFContextProvider(DevExpress.Data.Entity.IEFContextProvider)?v=23.1&p=netframework)
 <!-- feedback -->
 ## Does this example address your development requirements/objectives?
@@ -31,3 +31,4 @@ The following example obtains Entity Framework Core context from an ASP.NET Core
 
 (you will be redirected to DevExpress.com to submit your response)
 <!-- feedback end -->
+
