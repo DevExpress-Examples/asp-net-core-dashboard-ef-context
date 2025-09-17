@@ -14,7 +14,7 @@ The following example obtains Entity Framework Core context from an ASP.NET Core
 
 3. Call the [AddDbContext](https://learn.microsoft.com/en-us/dotnet/api/microsoft.extensions.dependencyinjection.entityframeworkservicecollectionextensions.adddbcontext?view=efcore-7.0) method to register the context in the dependency injection container and specify the required connection string in the `WebApplicationBuilder` class.
 
-4. In the `WebApplicationBuilder` class, register the [DashboardConfigurator](https://docs.devexpress.com/Dashboard/DevExpress.DashboardWeb.DashboardConfigurator) service and configure it using the [SetEFContextProvider(IEFContextProvider)](https://docs.devexpress.com/Dashboard/DevExpress.DashboardWeb.DashboardConfigurator.SetEFContextProvider(DevExpress.Data.Entity.IEFContextProvider)?v=23.1&p=netframework) method.
+4. In the `WebApplicationBuilder` class, register the [DashboardConfigurator](https://docs.devexpress.com/Dashboard/DevExpress.DashboardWeb.DashboardConfigurator) service and configure it using the [SetEFContextProvider(IEFContextProvider)](https://docs.devexpress.com/Dashboard/DevExpress.DashboardWeb.DashboardConfigurator.SetEFContextProvider(DevExpress.Data.Entity.IEFContextProvider)) method.
 
 ## Files to Review
 
@@ -23,7 +23,7 @@ The following example obtains Entity Framework Core context from an ASP.NET Core
 ## Documentation
 
 - [IEFContextProvider](https://docs.devexpress.com/CoreLibraries/DevExpress.Data.Entity.IEFContextProvider)
-- [DashboardConfigurator.SetEFContextProvider](https://docs.devexpress.com/Dashboard/DevExpress.DashboardWeb.DashboardConfigurator.SetEFContextProvider(DevExpress.Data.Entity.IEFContextProvider)?v=23.1&p=netframework)
+- [DashboardConfigurator.SetEFContextProvider](https://docs.devexpress.com/Dashboard/DevExpress.DashboardWeb.DashboardConfigurator.SetEFContextProvider(DevExpress.Data.Entity.IEFContextProvider))
 <!-- feedback -->
 ## Does this example address your development requirements/objectives?
 
@@ -31,4 +31,5 @@ The following example obtains Entity Framework Core context from an ASP.NET Core
 
 (you will be redirected to DevExpress.com to submit your response)
 <!-- feedback end -->
+
 
